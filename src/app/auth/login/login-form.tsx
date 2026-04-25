@@ -72,7 +72,8 @@ export function LoginForm() {
             validationState={showError ? "error" : "none"}
           >
             <Input
-              type="email"
+              type="text"
+              autoComplete="username"
               placeholder={t.login.emailPlaceholder}
               value={email}
               onChange={(_, d) => setEmail(d.value)}

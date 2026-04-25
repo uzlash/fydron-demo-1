@@ -1,9 +1,11 @@
 /**
- * Demo login for the prototype:
- * - michael@fydron.com / demo123
- * - bram@fydron.com / demo123
+ * Demo login for the prototype (no real auth):
+ * - Michael (or michael@fydron.com) / demo
+ * - Bram (or bram@fydron.com) / demo
+ *
+ * Login id matching is case-insensitive; session still stores the demo email shape.
  */
-export const DEMO_PASSWORD = "demo123" as const;
+export const DEMO_PASSWORD = "demo" as const;
 
 export type DemoUser = {
   email: string;
@@ -11,20 +13,17 @@ export type DemoUser = {
   lastName: string;
 };
 
-export function matchDemoUser(
-  email: string,
-  password: string,
-): DemoUser | null {
-  const normalizedEmail = email.trim().toLowerCase();
+export function matchDemoUser(loginId: string, password: string): DemoUser | null {
+  const id = loginId.trim().toLowerCase();
   const normalizedPassword = password.trim();
 
-  if (normalizedPassword !== DEMO_PASSWORD) return null;
+  if (!id || normalizedPassword !== DEMO_PASSWORD) return null;
 
-  if (normalizedEmail === "michael@fydron.com") {
+  if (id === "michael" || id === "michael@fydron.com") {
     return { email: "michael@fydron.com", firstName: "Michael", lastName: "" };
   }
 
-  if (normalizedEmail === "bram@fydron.com") {
+  if (id === "bram" || id === "bram@fydron.com") {
     return { email: "bram@fydron.com", firstName: "Bram", lastName: "" };
   }
 
