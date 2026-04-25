@@ -92,7 +92,7 @@ export function SidebarProfileMenu({ name, email }: SidebarProfileMenuProps) {
         >
           <Avatar name={name} color="colorful" size={32} />
           <div className="min-w-0 flex flex-1 flex-col justify-center gap-[2px]">
-            <Text size={300} block className="text-[13px] font-semibold leading-tight text-foreground">
+            <Text size={300} block className="text-[13px] font-normal leading-tight text-foreground"> 
               {name}
             </Text>
             <Text size={200} block className="truncate text-[11px] leading-tight text-secondary">

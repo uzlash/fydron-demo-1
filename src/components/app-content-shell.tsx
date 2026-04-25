@@ -30,7 +30,7 @@ type MainCardProps = {
 export function AppMainCard({ children }: MainCardProps) {
   return (
     <div className="box-border flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden p-2.5">
-      <div className="relative flex h-full min-h-0 w-full min-w-0 flex-col overflow-hidden rounded-2xl border border-border bg-surface">
+      <div className="relative flex h-full min-h-0 w-full min-w-0 flex-col overflow-hidden rounded-2xl  bg-surface">
         {children}
       </div>
     </div>

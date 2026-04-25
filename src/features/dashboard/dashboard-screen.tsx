@@ -60,7 +60,7 @@ export function DashboardScreen() {
               <Text
                 as="h1"
                 size={500}
-                weight="semibold"
+              
                 block
                 className="mb-1 text-[18px] leading-snug text-foreground"
               >

@@ -32,10 +32,10 @@ export function DashboardStats({ stats }: { stats: DashboardStat[] }) {
           <Card
             key={stat.key}
             appearance="outline"
-            className="flex h-20 flex-col justify-center rounded-md border border-border bg-surface shadow-none"
+            className="flex h-16 w-full flex-col justify-center rounded-md border border-border bg-surface shadow-none"
           >
-            <div className="flex items-center gap-3 px-4">
-              <span className="shrink-0 text-secondary [&_svg]:h-5 [&_svg]:w-5">
+            <div className="flex items-center gap-3 px-0">
+              <span className="shrink-0 bg-[#F5F5F5] p-2 rounded-[6px] text-secondary [&_svg]:h-5 [&_svg]:w-5">
                 {iconFor(stat.key)}
               </span>
               <div className="flex min-w-0 flex-col justify-center gap-0.5">

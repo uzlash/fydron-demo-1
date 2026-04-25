@@ -63,7 +63,7 @@ export function CreatePasswordForm() {
           </Text>
           <Text
             size={300}
-            className="text-sm leading-snug text-secondary"
+            className="flex h-[20px] w-[314px] items-center font-['Segoe_UI'] text-[14px] font-normal leading-[20px] text-[#71717B] grow order-0"
           >
             {t.createPassword.subtitle}
           </Text>
@@ -71,6 +71,7 @@ export function CreatePasswordForm() {
         <form className="flex flex-col gap-6" onSubmit={submit}>
           <div className="flex flex-col gap-4">
             <PasswordInput
+              className="[&_label]:h-[20px] [&_label]:font-['Segoe_UI'] [&_label]:text-[14px] [&_label]:font-normal [&_label]:leading-[20px] [&_label]:text-[#242424]"
               label={t.createPassword.newPassword}
               value={a}
               onChange={setA}
@@ -78,6 +79,7 @@ export function CreatePasswordForm() {
               placeholder={t.createPassword.placeholder}
             />
             <PasswordInput
+              className="[&_label]:h-[20px] [&_label]:font-['Segoe_UI'] [&_label]:text-[14px] [&_label]:font-normal [&_label]:leading-[20px] [&_label]:text-[#242424]"
               label={t.createPassword.confirmPassword}
               value={b}
               onChange={setB}

@@ -45,9 +45,9 @@ function NavRow({ item }: { item: NavItem }) {
       : pathname.startsWith(item.href)
     : false;
 
-  const rowClassName = `group relative flex h-9 items-center justify-between pl-[24px] pr-[16px] ${
+  const rowClassName = `group relative flex h-9 items-center justify-between pl-[24px] pr-[6px] rounded-[4px] ${
     isActive
-      ? "bg-surface text-foreground font-semibold"
+      ? "bg-surface ml-0  text-foreground font-normal"
       : item.disabled
         ? "text-muted"
         : "text-body hover:bg-border-soft"
@@ -56,7 +56,7 @@ function NavRow({ item }: { item: NavItem }) {
   const content = (
     <>
       {isActive && (
-        <div className="absolute left-0 top-1/2 h-5 w-[3px] -translate-y-1/2 bg-primary" />
+        <div className="absolute left-2 top-1/2 rounded-[4px] h-5 w-[4px] -translate-y-1/2 bg-primary" />
       )}
 
       <div className="flex min-w-0 items-center gap-[12px]">
@@ -129,10 +129,10 @@ export function DashboardSidebar() {
         <FydronLogo className="text-[30px]" />
       </div>
 
-      <nav className="flex flex-1 flex-col gap-6 overflow-y-auto mt-2">
+      <nav className="flex flex-1 flex-col gap-4 overflow-y-auto mt-3">
         {groups.map((group) => (
           <div key={group.title} className="flex flex-col">
-            <Text size={200} className="mb-[6px] px-6 text-[10px] text-muted uppercase tracking-wide">
+            <Text size={200} className="mb-[8px] px-6 text-[10px]  tracking-wide">
               {group.title}
             </Text>
             <div className="flex flex-col gap-[2px]">

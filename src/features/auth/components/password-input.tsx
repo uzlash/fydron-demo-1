@@ -66,12 +66,12 @@ export function PasswordInput({
           <Button
             appearance="transparent"
             size="small"
-            className="min-h-8 min-w-8 shrink-0 text-secondary hover:text-body"
+            className="min-h-6 min-w-6 shrink-0 text-secondary opacity-90 hover:opacity-70 hover:text-body"
             icon={
               visible ? (
-                <EyeOff24Regular className="h-5 w-5" />
+                <EyeOff24Regular className="h-4 w-4" />
               ) : (
-                <Eye24Regular className="h-5 w-5" />
+                <Eye24Regular className="h-4 w-4" />
               )
             }
             aria-label={visible ? "Hide password" : "Show password"}

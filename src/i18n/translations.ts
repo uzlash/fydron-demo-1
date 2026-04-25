@@ -26,7 +26,7 @@ export const en = {
     email: "Email",
     password: "Password",
     forgotPassword: "Forgot password?",
-    submit: "Log in",
+    submit: "Login",
     signIn: "Sign in",
     noAccount: "Don't have an account?",
     signUp: "Sign up",
